@@ -18,9 +18,32 @@ arr: an array of integers .
  */
 package EasyChallenges;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 /**
     @author Alejandro
  */
 public class DiagonalDifference {
+    
+    private static final int TAMANO = 3;
+
+    public static void main(String[] args) {
+
+        List<Integer> fila = new ArrayList<>();
+        List<List<Integer>> arr = new ArrayList<>();
+        Random rnd = new Random();
+        
+        for(int i=0 ; i < TAMANO ; i++){
+            for (int j = 0; j < TAMANO; j++) {
+                fila.add(j);
+            }
+            arr.set(i, fila);
+            fila.clear();
+        }
+
+    }
+    
     
 }
