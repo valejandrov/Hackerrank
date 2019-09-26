@@ -19,8 +19,11 @@ arr: an array of integers .
 package EasyChallenges;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
     @author Alejandro
@@ -37,12 +40,32 @@ public class DiagonalDifference {
         
         for(int i=0 ; i < TAMANO ; i++){
             for (int j = 0; j < TAMANO; j++) {
-                fila.add(j);
+                fila.add(rnd.nextInt(100));
             }
-            arr.set(i, fila);
+            arr.add(new ArrayList<>(fila));
             fila.clear();
         }
+        
+        for (List<Integer> list : arr) {
+            System.out.println(list);
+        }
+        
+        int diagonalLeftToRight = 0;
+        int diagonalRightToLeft = 0;
+        
+        
 
+        
+        /*
+        Iterator<List<Integer>> it = arr.iterator();
+        while(it.hasNext()){
+            List<Integer> lista = it.next();
+            for(Integer r : lista){
+                System.out.println(r.intValue());
+            }
+        }
+        */
+        
     }
     
     
