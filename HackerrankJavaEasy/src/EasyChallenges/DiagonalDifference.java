@@ -18,12 +18,10 @@ arr: an array of integers .
  */
 package EasyChallenges;
 
+import static java.lang.Math.abs;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
-import java.util.Scanner;
 
 /**
     @author Alejandro
@@ -52,9 +50,18 @@ public class DiagonalDifference {
         
         int diagonalLeftToRight = 0;
         int diagonalRightToLeft = 0;
+        int counter = 1;
         
+        for (List<Integer> list : arr) {
+            diagonalRightToLeft += list.get(TAMANO-counter);
+            diagonalLeftToRight += list.get(counter-1);
+            counter++;
+        }        
         
-
+        System.out.println(diagonalLeftToRight);
+        System.out.println(diagonalRightToLeft);
+        
+        System.out.println("Diagonal difference: "+ abs(diagonalLeftToRight - diagonalRightToLeft));
         
         /*
         Iterator<List<Integer>> it = arr.iterator();
